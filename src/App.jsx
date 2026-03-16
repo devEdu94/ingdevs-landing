@@ -821,7 +821,7 @@ const TESTIMONIALS = [
     initial: "CS",
   },
   {
-    name: "Camila Rojas",
+    name: "Cintía Martínez",
     role: "Propietaria",
     company: "Oregon Centro de Eventos",
     text: "Nos hicieron una página web preciosa y moderna. Desde que la tenemos, las cotizaciones aumentaron notablemente. El equipo fue muy profesional y nos guió en todo el proceso. ¡Excelente trabajo!",
