@@ -29,6 +29,9 @@ import imgPanel       from "./assets/proj_panel.png";
 import imgLogin       from "./assets/proj_login.png";
 import imgLogin2      from "./assets/proj_login2.png";
 import imgErp         from "./assets/proj_erp.png";
+import imgOregon1     from "./assets/proj_oregon1.png";
+import imgOregon2     from "./assets/proj_oregon2.png";
+import imgOregon3     from "./assets/proj_oregon3.png";
 import imgInterfaz    from "./assets/proj_interfaz.png";
 import imgAdmin       from "./assets/proj_admin.png";
 import imgM365        from "./assets/microsoft365.png";
@@ -41,9 +44,9 @@ const LOC = "Osorno, Chile";
 
 // ── EmailJS — reemplaza con tus credenciales reales ──────────
 // Instrucciones al final del archivo
-const EMAILJS_SERVICE  = "service_qfnu236";
-const EMAILJS_TEMPLATE = "template_ot2zebj";
-const EMAILJS_KEY      = "vnA41fl5zhFTmQUtA";
+const EMAILJS_SERVICE  = "TU_SERVICE_ID";
+const EMAILJS_TEMPLATE = "TU_TEMPLATE_ID";
+const EMAILJS_KEY      = "TU_PUBLIC_KEY";
 
 // ── Colores del tema azul oscuro ─────────────────────────────
 // bg principal:   #0A0F1E
@@ -475,6 +478,49 @@ function Projects() {
           </div>
         </motion.div>
 
+        {/* — OREGON: Sitio Web — */}
+        <motion.div variants={fadeUp} initial="hidden" animate={inView ? "visible" : "hidden"} custom={5}
+          className="mt-8 bg-[#111827] rounded-3xl overflow-hidden border border-white/5 hover:border-amber-500/20 transition-all duration-500">
+          <div className="p-8 border-b border-white/5">
+            <div className="flex items-center justify-between flex-wrap gap-4">
+              <div>
+                <span className="text-amber-400 text-xs font-bold uppercase tracking-widest block mb-2">Diseño Web</span>
+                <h3 className="text-xl font-black text-white">Oregon Centro de Eventos</h3>
+                <p className="text-slate-400 text-sm mt-1">Sitio web corporativo · Galería · Cotizaciones online · Osorno, Chile</p>
+              </div>
+              <div className="flex gap-2 flex-wrap">
+                {["React", "Diseño", "Responsive", "WhatsApp"].map(t => (
+                  <span key={t} className="text-xs px-3 py-1.5 rounded-full bg-amber-500/10 text-amber-300 border border-amber-500/20">{t}</span>
+                ))}
+              </div>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/5">
+            {[
+              { img: imgOregon1, label: "Página de inicio",     sub: "Hero con llamadas a la acción" },
+              { img: imgOregon2, label: "Sección de servicios", sub: "Bodas, Bautizos, Baby Shower y más" },
+              { img: imgOregon3, label: "Galería de eventos",   sub: "Fotos reales de eventos realizados" },
+            ].map((item) => (
+              <div key={item.label} className="group relative overflow-hidden bg-[#0D1526]">
+                <img src={item.img} alt={item.label}
+                  className="w-full h-52 object-cover object-top group-hover:scale-[1.04] group-hover:brightness-110 transition-all duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                <div className="absolute bottom-0 left-0 right-0 p-4">
+                  <p className="text-white font-bold text-sm">{item.label}</p>
+                  <p className="text-slate-400 text-xs">{item.sub}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="p-6 flex items-center justify-between flex-wrap gap-4">
+            <p className="text-slate-500 text-sm">Sitio web elegante y moderno para centros de eventos, con galería, servicios y formulario de cotización.</p>
+            <a href={WA} target="_blank" rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 text-amber-400 font-bold text-sm hover:text-amber-300 transition-colors">
+              Quiero mi sitio web <ArrowUpRight className="w-4 h-4" />
+            </a>
+          </div>
+        </motion.div>
+
         {/* React banner */}
         <motion.div variants={fadeUp} initial="hidden" animate={inView ? "visible" : "hidden"} custom={6}
           className="mt-8 relative rounded-3xl overflow-hidden h-56">
@@ -755,6 +801,89 @@ function About() {
 }
 
 // ────────────────────────────────────────────────────────────
+// TESTIMONIOS
+// ────────────────────────────────────────────────────────────
+const TESTIMONIALS = [
+  {
+    name: "María José Fuentes",
+    role: "Directora",
+    company: "Clínica Vita",
+    text: "IngDevs nos desarrolló un sistema de agendamiento y control de jornadas increíble. La atención fue excelente y el resultado superó nuestras expectativas. Ahora manejamos todo desde una sola plataforma.",
+    color: "#06B6D4",
+    initial: "MJ",
+  },
+  {
+    name: "Carlos Sepúlveda",
+    role: "Administrador",
+    company: "Tienda La Vaquita",
+    text: "Necesitábamos un sistema de inventario y ventas urgente. IngDevs lo entregó en tiempo récord y funciona perfecto. El control de stock en tiempo real nos cambió la vida. 100% recomendados.",
+    color: "#10B981",
+    initial: "CS",
+  },
+  {
+    name: "Camila Rojas",
+    role: "Propietaria",
+    company: "Oregon Centro de Eventos",
+    text: "Nos hicieron una página web preciosa y moderna. Desde que la tenemos, las cotizaciones aumentaron notablemente. El equipo fue muy profesional y nos guió en todo el proceso. ¡Excelente trabajo!",
+    color: "#F59E0B",
+    initial: "CR",
+  },
+];
+
+function Testimonials() {
+  const { ref, inView } = useReveal();
+  return (
+    <section className="py-24 bg-[#0A0F1E]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div ref={ref} className="max-w-2xl mb-16">
+          <motion.div variants={fadeUp} initial="hidden" animate={inView ? "visible" : "hidden"}>
+            <Label>Testimonios</Label>
+          </motion.div>
+          <motion.h2 variants={fadeUp} initial="hidden" animate={inView ? "visible" : "hidden"} custom={1}
+            className="text-3xl sm:text-4xl font-black text-white leading-tight mb-4">
+            Lo que dicen nuestros clientes
+          </motion.h2>
+          <motion.p variants={fadeUp} initial="hidden" animate={inView ? "visible" : "hidden"} custom={2}
+            className="text-slate-400 text-lg">
+            Empresas que ya confían en IngDevs para digitalizar sus operaciones.
+          </motion.p>
+        </div>
+
+        <motion.div variants={stagger} initial="hidden" animate={inView ? "visible" : "hidden"}
+          className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {TESTIMONIALS.map((t) => (
+            <motion.div key={t.name} variants={fadeUp}
+              className="bg-[#111827] rounded-2xl p-7 border border-white/5 hover:border-white/10 hover:shadow-xl hover:shadow-black/40 transition-all duration-500 flex flex-col">
+              {/* Estrellas */}
+              <div className="flex gap-1 mb-5">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="w-4 h-4" fill="#F59E0B" viewBox="0 0 20 20">
+                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                  </svg>
+                ))}
+              </div>
+              {/* Texto */}
+              <p className="text-slate-400 text-sm leading-relaxed flex-1 mb-6 italic">"{t.text}"</p>
+              {/* Autor */}
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full flex items-center justify-center font-black text-sm text-white flex-shrink-0"
+                  style={{ backgroundColor: `${t.color}30`, border: `2px solid ${t.color}50` }}>
+                  <span style={{ color: t.color }}>{t.initial}</span>
+                </div>
+                <div>
+                  <p className="text-white font-bold text-sm">{t.name}</p>
+                  <p className="text-slate-500 text-xs">{t.role} · {t.company}</p>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
+      </div>
+    </section>
+  );
+}
+
+// ────────────────────────────────────────────────────────────
 // FORMULARIO DE CONTACTO
 // ────────────────────────────────────────────────────────────
 function ContactForm() {
@@ -1025,6 +1154,7 @@ export default function App() {
         <Microsoft365 />
         <SoporteTI />
         <About />
+        <Testimonials />
         <ContactForm />
       </main>
       <Footer />
