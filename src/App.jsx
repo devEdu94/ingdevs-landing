@@ -164,7 +164,7 @@ function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-[68px] flex items-center justify-between">
         <button onClick={() => go("#inicio")} className="flex items-center">
-          <img src={imgLogo} alt="IngDevs Digital Solutions" className="h-11 w-auto object-contain drop-shadow" />
+          <img src={imgLogo} alt="IngDevs Digital Solutions" className="h-11 w-11 object-cover rounded-full drop-shadow border border-white/10" />
         </button>
 
         <nav className="hidden lg:flex items-center gap-0.5">
@@ -767,7 +767,7 @@ function About() {
           transition={{ duration: 0.8 }} className="bg-[#111827] rounded-3xl overflow-hidden border border-white/5">
           <div className="grid lg:grid-cols-2">
             <div className="p-10 lg:p-14">
-              <img src={imgLogo} alt="IngDevs" className="h-14 w-auto object-contain mb-8 opacity-90" />
+              <img src={imgLogo} alt="IngDevs" className="h-14 w-14 object-cover rounded-full mb-8 opacity-90 border border-white/10" />
               <h3 className="text-2xl font-black text-white mb-3">Ingeniería con propósito,<br />desde el sur de Chile</h3>
               <p className="text-slate-400 text-sm leading-relaxed mb-6">
                 No somos solo desarrolladores — somos el equipo tecnológico que tu empresa necesita.
@@ -821,7 +821,7 @@ const TESTIMONIALS = [
     initial: "CS",
   },
   {
-    name: "Cintía Martínez",
+    name: "Camila Rojas",
     role: "Propietaria",
     company: "Oregon Centro de Eventos",
     text: "Nos hicieron una página web preciosa y moderna. Desde que la tenemos, las cotizaciones aumentaron notablemente. El equipo fue muy profesional y nos guió en todo el proceso. ¡Excelente trabajo!",
@@ -1066,7 +1066,7 @@ function Footer() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid sm:grid-cols-3 gap-10 pb-10 border-b border-white/5">
           <div>
-            <img src={imgLogo} alt="IngDevs Digital Solutions" className="h-12 w-auto object-contain mb-5 opacity-90" />
+            <img src={imgLogo} alt="IngDevs Digital Solutions" className="h-12 w-12 object-cover rounded-full mb-5 opacity-90 border border-white/10" />
             <p className="text-slate-500 text-sm leading-relaxed">
               Automatización, software a medida, soporte TI y Microsoft 365.
               Desde Osorno para todo Chile.
