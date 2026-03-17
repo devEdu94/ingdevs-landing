@@ -44,9 +44,9 @@ const LOC = "Osorno, Chile";
 
 // ── EmailJS — reemplaza con tus credenciales reales ──────────
 // Instrucciones al final del archivo
-const EMAILJS_SERVICE  = "TU_SERVICE_ID";
-const EMAILJS_TEMPLATE = "TU_TEMPLATE_ID";
-const EMAILJS_KEY      = "TU_PUBLIC_KEY";
+const EMAILJS_SERVICE  = "service_qfnu236";
+const EMAILJS_TEMPLATE = "template_ot2zebj";
+const EMAILJS_KEY      = "vnA41fl5zhFTmQUtA";
 
 // ── Colores del tema azul oscuro ─────────────────────────────
 // bg principal:   #0A0F1E
