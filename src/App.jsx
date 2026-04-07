@@ -46,9 +46,6 @@ import imgLogoBV      from "./assets/logo_buildvision.png";
 import imgTerraLink1  from "./assets/proj_terralink1.png";
 import imgTerraLink2  from "./assets/proj_terralink2.png";
 import imgTerraLink3  from "./assets/proj_terralink3.png";
-import imgOregon1     from "./assets/proj_oregon1.png";
-import imgOregon2     from "./assets/proj_oregon2.png";
-import imgOregon3     from "./assets/proj_oregon3.png";
 
 // ── Config ──────────────────────────────────────────────────
 const WA  = "https://wa.me/56987134632?text=Hola%20IngDevs,%20necesito%20informaci%C3%B3n%20sobre...";
