@@ -89,7 +89,7 @@ const SERVICES = [
 ];
 
 const STATS = [
-  { value: "6+",     label: "Proyectos entregados"         },
+  { value: "50+",     label: "Proyectos entregados"         },
   { value: "100%",   label: "Código a medida"              },
   { value: "24h",    label: "Tiempo de respuesta"          },
   { value: "Sur CL", label: "Base local, alcance nacional" },
