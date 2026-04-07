@@ -790,133 +790,146 @@ function ProductosIngDevs() {
           </motion.p>
         </div>
 
-        {/* — BUILDVISION — */}
+        {/* ── BUILDVISION ─────────────────────────────────────── */}
         <motion.div variants={fadeUp} initial="hidden" animate={inView ? "visible" : "hidden"} custom={1}
-          className="mb-8 bg-[#111827] rounded-3xl overflow-hidden border border-white/5 hover:border-cyan-500/20 hover:shadow-2xl hover:shadow-cyan-900/20 transition-all duration-500">
-          <div className="grid lg:grid-cols-2 gap-0">
-            <div className="relative overflow-hidden">
-              <img src={imgBuildVision1} alt="BuildVision Dashboard"
-                className="w-full h-full object-cover min-h-[300px] brightness-105 hover:brightness-115 hover:scale-[1.02] transition-all duration-700" />
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#111827]/60 lg:block hidden" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#111827]/80 to-transparent lg:hidden" />
-              <div className="absolute top-4 left-4">
-                <img src={imgLogoBV} alt="BuildVision" className="h-10 w-auto object-contain drop-shadow-lg" />
-              </div>
-            </div>
-            <div className="p-8 lg:p-10 flex flex-col justify-center">
-              <span className="text-cyan-400 text-xs font-bold uppercase tracking-widest mb-3">Plataforma SaaS · Construcción</span>
-              <h3 className="text-2xl font-black text-white mb-3">BuildVision</h3>
-              <p className="text-slate-400 text-sm leading-relaxed mb-5">
-                Automatiza todo el proceso de construcción. Escanea el terreno con AR, elige modelos de casa, calcula materiales de Sodimac y Easy, obtén planos de arquitectura, costos estimados, tiempos y recomendaciones — todo en una sola plataforma.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-6">
-                {["Escaneo AR", "Modelos de Casa", "Cálculo de Materiales", "Planos", "Costos", "Reportes"].map(f => (
-                  <span key={f} className="text-xs px-3 py-1.5 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/20">{f}</span>
-                ))}
+          className="mb-10 bg-[#111827] rounded-3xl overflow-hidden border border-white/5 hover:border-cyan-500/20 hover:shadow-2xl hover:shadow-cyan-900/20 transition-all duration-500">
+
+          {/* Header con logo + info + planes */}
+          <div className="p-8 lg:p-10 border-b border-white/5">
+            <div className="flex flex-col lg:flex-row lg:items-start gap-8">
+              {/* Logo + descripción */}
+              <div className="flex-1">
+                <div className="flex items-center gap-4 mb-4">
+                  <img src={imgLogoBV} alt="BuildVision" className="h-12 w-auto object-contain drop-shadow-lg" />
+                  <div>
+                    <span className="text-cyan-400 text-xs font-bold uppercase tracking-widest block">Plataforma SaaS · Construcción</span>
+                    <h3 className="text-2xl font-black text-white">BuildVision</h3>
+                  </div>
+                </div>
+                <p className="text-slate-400 text-sm leading-relaxed mb-5">
+                  Automatiza todo el proceso de construcción. Escanea el terreno con AR, elige modelos de casa, calcula materiales de Sodimac y Easy, obtén planos de arquitectura, costos estimados, tiempos y recomendaciones — todo en una sola plataforma.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {["Escaneo AR", "Modelos de Casa", "Cálculo de Materiales", "Planos", "Costos", "Reportes"].map(f => (
+                    <span key={f} className="text-xs px-3 py-1.5 rounded-full bg-cyan-500/10 text-cyan-300 border border-cyan-500/20">{f}</span>
+                  ))}
+                </div>
               </div>
 
-              {/* Planes */}
-              <div className="grid grid-cols-2 gap-3 mb-6">
+              {/* Planes + CTA */}
+              <div className="lg:w-72 flex flex-col gap-3">
                 <div className="bg-[#0A0F1E] rounded-2xl p-4 border border-white/10">
                   <p className="text-slate-400 text-xs font-bold uppercase tracking-wider mb-1">Personal / Profesional</p>
-                  <p className="text-white font-black text-xl">$9.990<span className="text-slate-500 text-xs font-normal">/mes</span></p>
+                  <p className="text-white font-black text-2xl">$9.990<span className="text-slate-500 text-sm font-normal">/mes</span></p>
                   <p className="text-slate-500 text-xs mt-1">Ideal para profesionales independientes</p>
                 </div>
                 <div className="bg-gradient-to-br from-cyan-500/20 to-blue-600/20 rounded-2xl p-4 border border-cyan-500/30">
-                  <p className="text-cyan-400 text-xs font-bold uppercase tracking-wider mb-1">Plan Empresa</p>
-                  <p className="text-white font-black text-xl">$59.990<span className="text-slate-500 text-xs font-normal">/mes</span></p>
+                  <p className="text-cyan-400 text-xs font-bold uppercase tracking-wider mb-1">⭐ Plan Empresa</p>
+                  <p className="text-white font-black text-2xl">$59.990<span className="text-slate-500 text-sm font-normal">/mes</span></p>
                   <p className="text-slate-500 text-xs mt-1">Para empresas constructoras</p>
                 </div>
+                <a href={WA} target="_blank" rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold px-6 py-3 rounded-2xl shadow-lg hover:scale-105 transition-all text-sm">
+                  <MessageCircle className="w-4 h-4" /> Solicitar BuildVision <ArrowUpRight className="w-4 h-4 opacity-70" />
+                </a>
               </div>
-
-              <a href={WA} target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white font-bold px-6 py-3 rounded-2xl shadow-lg hover:scale-105 transition-all text-sm">
-                <MessageCircle className="w-4 h-4" />
-                Solicitar BuildVision
-                <ArrowUpRight className="w-4 h-4 opacity-70" />
-              </a>
             </div>
           </div>
 
-          {/* Screenshots BuildVision */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/5">
-            {[
-              { img: imgBuildVision2, label: "Escanear Terreno",    sub: "Tecnología AR para medir terrenos" },
-              { img: imgBuildVision3, label: "Materiales y Costos", sub: "Listado automático con precios actualizados" },
-              { img: imgBuildVision4, label: "Reportes y Análisis", sub: "Métricas y resumen financiero del proyecto" },
-            ].map((item) => (
-              <div key={item.label} className="group relative overflow-hidden bg-[#0D1526]">
-                <img src={item.img} alt={item.label}
-                  className="w-full h-48 object-cover object-top group-hover:scale-[1.04] group-hover:brightness-110 transition-all duration-700" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
-                <div className="absolute bottom-0 left-0 right-0 p-4">
-                  <p className="text-white font-bold text-sm">{item.label}</p>
-                  <p className="text-slate-400 text-xs">{item.sub}</p>
-                </div>
+          {/* Screenshots — imagen principal grande + 3 pequeñas */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-px bg-white/5">
+            {/* Dashboard principal — grande */}
+            <div className="group relative overflow-hidden bg-[#0D1526] lg:row-span-1">
+              <img src={imgBuildVision1} alt="BuildVision Dashboard"
+                className="w-full h-72 object-cover object-top group-hover:scale-[1.03] group-hover:brightness-110 transition-all duration-700" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+              <div className="absolute bottom-0 left-0 right-0 p-5">
+                <span className="text-cyan-400 text-xs font-bold uppercase tracking-wider">Dashboard Principal</span>
+                <p className="text-white font-bold text-sm mt-1">Vista general de proyectos y KPIs en tiempo real</p>
               </div>
-            ))}
+            </div>
+            {/* 3 screenshots en columna derecha */}
+            <div className="grid grid-rows-3 gap-px bg-white/5">
+              {[
+                { img: imgBuildVision2, label: "Escanear Terreno",    sub: "Tecnología AR simulada para medir terrenos" },
+                { img: imgBuildVision3, label: "Materiales y Costos", sub: "Cálculo automático con precios de Sodimac y Easy" },
+                { img: imgBuildVision4, label: "Reportes y Análisis", sub: "Resumen financiero y distribución de costos" },
+              ].map((item) => (
+                <div key={item.label} className="group relative overflow-hidden bg-[#0D1526]">
+                  <img src={item.img} alt={item.label}
+                    className="w-full h-24 object-cover object-top group-hover:scale-[1.04] group-hover:brightness-110 transition-all duration-700" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/30 to-transparent" />
+                  <div className="absolute inset-0 flex items-center px-4">
+                    <div>
+                      <p className="text-white font-bold text-xs">{item.label}</p>
+                      <p className="text-slate-400 text-[10px]">{item.sub}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </motion.div>
 
-        {/* — TERRALINK — */}
+        {/* ── TERRALINK ─────────────────────────────────────── */}
         <motion.div variants={fadeUp} initial="hidden" animate={inView ? "visible" : "hidden"} custom={2}
           className="bg-[#111827] rounded-3xl overflow-hidden border border-white/5 hover:border-blue-500/20 hover:shadow-2xl hover:shadow-blue-900/20 transition-all duration-500">
-          <div className="grid lg:grid-cols-2 gap-0">
-            <div className="relative overflow-hidden">
-              <img src={imgTerraLink1} alt="TerraLink"
-                className="w-full h-full object-cover min-h-[300px] brightness-105 hover:brightness-115 hover:scale-[1.02] transition-all duration-700" />
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#111827]/60 lg:block hidden" />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#111827]/80 to-transparent lg:hidden" />
-              <div className="absolute top-4 left-4 flex items-center gap-2 bg-black/60 backdrop-blur-sm px-3 py-1.5 rounded-full border border-white/10">
-                <span className="text-white font-black text-sm">TerraLink</span>
-                <span className="text-blue-400 text-xs">Inmobiliaria</span>
-              </div>
-            </div>
-            <div className="p-8 lg:p-10 flex flex-col justify-center">
-              <span className="text-blue-400 text-xs font-bold uppercase tracking-widest mb-3">Plataforma SaaS · Inmobiliaria</span>
-              <h3 className="text-2xl font-black text-white mb-3">TerraLink</h3>
-              <p className="text-slate-400 text-sm leading-relaxed mb-5">
-                Plataforma para gestión de ventas de propiedades. Profesionales independientes y empresas pueden publicar propiedades, agregar su WhatsApp, correo y contactos, gestionar su cartera completa y conectar directamente con clientes interesados.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-6">
-                {["Gestión de Propiedades", "Contacto Directo", "Filtros de Búsqueda", "Multi-corredora", "Fotos", "Ubicación"].map(f => (
-                  <span key={f} className="text-xs px-3 py-1.5 rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20">{f}</span>
-                ))}
+
+          {/* Header con info + planes */}
+          <div className="p-8 lg:p-10 border-b border-white/5">
+            <div className="flex flex-col lg:flex-row lg:items-start gap-8">
+              {/* Info */}
+              <div className="flex-1">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-10 h-10 rounded-xl bg-blue-500/20 border border-blue-500/30 flex items-center justify-center">
+                    <span className="text-blue-400 font-black text-sm">TL</span>
+                  </div>
+                  <div>
+                    <span className="text-blue-400 text-xs font-bold uppercase tracking-widest block">Plataforma SaaS · Inmobiliaria</span>
+                    <h3 className="text-2xl font-black text-white">TerraLink</h3>
+                  </div>
+                </div>
+                <p className="text-slate-400 text-sm leading-relaxed mb-5">
+                  Plataforma para gestión de ventas de propiedades. Profesionales independientes y empresas publican propiedades con su WhatsApp, correo y contactos integrados. Filtros por tipo, ubicación y precio para conectar directamente con compradores.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {["Gestión de Propiedades", "Contacto Directo", "Filtros de Búsqueda", "Multi-corredora", "Fotos", "Ubicación"].map(f => (
+                    <span key={f} className="text-xs px-3 py-1.5 rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20">{f}</span>
+                  ))}
+                </div>
               </div>
 
-              {/* Planes */}
-              <div className="grid grid-cols-2 gap-3 mb-6">
+              {/* Planes + CTA */}
+              <div className="lg:w-72 flex flex-col gap-3">
                 <div className="bg-[#0A0F1E] rounded-2xl p-4 border border-white/10">
                   <p className="text-slate-400 text-xs font-bold uppercase tracking-wider mb-1">Personal / Profesional</p>
-                  <p className="text-white font-black text-xl">$9.990<span className="text-slate-500 text-xs font-normal">/mes</span></p>
+                  <p className="text-white font-black text-2xl">$9.990<span className="text-slate-500 text-sm font-normal">/mes</span></p>
                   <p className="text-slate-500 text-xs mt-1">Corredores independientes</p>
                 </div>
                 <div className="bg-gradient-to-br from-blue-500/20 to-indigo-600/20 rounded-2xl p-4 border border-blue-500/30">
-                  <p className="text-blue-400 text-xs font-bold uppercase tracking-wider mb-1">Plan Empresa</p>
-                  <p className="text-white font-black text-xl">$29.990<span className="text-slate-500 text-xs font-normal">/mes</span></p>
+                  <p className="text-blue-400 text-xs font-bold uppercase tracking-wider mb-1">⭐ Plan Empresa</p>
+                  <p className="text-white font-black text-2xl">$29.990<span className="text-slate-500 text-sm font-normal">/mes</span></p>
                   <p className="text-slate-500 text-xs mt-1">Inmobiliarias y equipos</p>
                 </div>
+                <a href={WA} target="_blank" rel="noopener noreferrer"
+                  className="flex items-center justify-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold px-6 py-3 rounded-2xl shadow-lg hover:scale-105 transition-all text-sm">
+                  <MessageCircle className="w-4 h-4" /> Solicitar TerraLink <ArrowUpRight className="w-4 h-4 opacity-70" />
+                </a>
               </div>
-
-              <a href={WA} target="_blank" rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-400 hover:to-indigo-500 text-white font-bold px-6 py-3 rounded-2xl shadow-lg hover:scale-105 transition-all text-sm">
-                <MessageCircle className="w-4 h-4" />
-                Solicitar TerraLink
-                <ArrowUpRight className="w-4 h-4 opacity-70" />
-              </a>
             </div>
           </div>
 
-          {/* Screenshots TerraLink */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-white/5">
+          {/* Screenshots TerraLink — 3 en grid uniforme */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-white/5">
             {[
-              { img: imgTerraLink2, label: "Listado de Propiedades", sub: "Catálogo con filtros y precios actualizados" },
-              { img: imgTerraLink3, label: "Por qué elegirnos",      sub: "Perfil profesional con contacto directo" },
+              { img: imgTerraLink1, label: "Página de Inicio",        sub: "Búsqueda avanzada con filtros inteligentes" },
+              { img: imgTerraLink2, label: "Listado de Propiedades",  sub: "Catálogo completo con precios y fotos" },
+              { img: imgTerraLink3, label: "Perfil Profesional",      sub: "Contacto directo con el corredor o empresa" },
             ].map((item) => (
               <div key={item.label} className="group relative overflow-hidden bg-[#0D1526]">
                 <img src={item.img} alt={item.label}
-                  className="w-full h-52 object-cover object-top group-hover:scale-[1.04] group-hover:brightness-110 transition-all duration-700" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
+                  className="w-full h-56 object-cover object-top group-hover:scale-[1.04] group-hover:brightness-110 transition-all duration-700" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/10 to-transparent" />
                 <div className="absolute bottom-0 left-0 right-0 p-4">
                   <p className="text-white font-bold text-sm">{item.label}</p>
                   <p className="text-slate-400 text-xs">{item.sub}</p>
@@ -924,9 +937,10 @@ function ProductosIngDevs() {
               </div>
             ))}
           </div>
-          <div className="p-6 flex items-center justify-between flex-wrap gap-4">
-            <p className="text-slate-500 text-sm">Para más información sobre planes y precios contacta por WhatsApp o correo.</p>
-            <div className="flex gap-3">
+
+          <div className="p-6 flex items-center justify-between flex-wrap gap-4 border-t border-white/5">
+            <p className="text-slate-500 text-sm">Para más información contacta por WhatsApp o correo.</p>
+            <div className="flex gap-4">
               <a href={WA} target="_blank" rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 text-blue-400 font-bold text-sm hover:text-blue-300 transition-colors">
                 <MessageCircle className="w-4 h-4" /> WhatsApp
